@@ -22,4 +22,18 @@
     // Update the view, if already loaded.
 }
 
+- (IBAction) connectBluetooth:(id)sender {
+    NSLog(@"BUTTON");
+    BluetoothConnection* bc = [[BluetoothConnection alloc] init];
+    [self setMyBC:bc];
+    [self.myBC bluetoothSearch];
+    
+    
+}
+
+- (IBAction) poundKey:(id)sender {
+    NSLog(@"POUND");
+    [self.myBC.phone sendDTMF:@"1"];
+}
+
 @end

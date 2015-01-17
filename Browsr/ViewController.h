@@ -7,9 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "BluetoothConnection.h"
 
 @interface ViewController : NSViewController
-
+@property (strong) BluetoothConnection* myBC;
 
 @end
 

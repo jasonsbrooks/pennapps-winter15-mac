@@ -13,6 +13,7 @@
 		A7FBB17D1A6A3B8B006B8516 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7FBB17C1A6A3B8B006B8516 /* Images.xcassets */; };
 		A7FBB1801A6A3B8B006B8516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FBB17E1A6A3B8B006B8516 /* Main.storyboard */; };
 		A7FBB18C1A6A3B8B006B8516 /* BrowsrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FBB18B1A6A3B8B006B8516 /* BrowsrTests.m */; };
+		A7FBB1971A6A3CE8006B8516 /* BluetoothConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FBB1961A6A3CE8006B8516 /* BluetoothConnection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		A7FBB1851A6A3B8B006B8516 /* BrowsrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrowsrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FBB18A1A6A3B8B006B8516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7FBB18B1A6A3B8B006B8516 /* BrowsrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowsrTests.m; sourceTree = "<group>"; };
+		A7FBB1951A6A3CE8006B8516 /* BluetoothConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothConnection.h; sourceTree = "<group>"; };
+		A7FBB1961A6A3CE8006B8516 /* BluetoothConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothConnection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				A7FBB1751A6A3B8B006B8516 /* AppDelegate.m */,
 				A7FBB1791A6A3B8B006B8516 /* ViewController.h */,
 				A7FBB17A1A6A3B8B006B8516 /* ViewController.m */,
+				A7FBB1951A6A3CE8006B8516 /* BluetoothConnection.h */,
+				A7FBB1961A6A3CE8006B8516 /* BluetoothConnection.m */,
 				A7FBB17C1A6A3B8B006B8516 /* Images.xcassets */,
 				A7FBB17E1A6A3B8B006B8516 /* Main.storyboard */,
 				A7FBB1721A6A3B8B006B8516 /* Supporting Files */,
@@ -217,6 +222,7 @@
 			files = (
 				A7FBB17B1A6A3B8B006B8516 /* ViewController.m in Sources */,
 				A7FBB1781A6A3B8B006B8516 /* main.m in Sources */,
+				A7FBB1971A6A3CE8006B8516 /* BluetoothConnection.m in Sources */,
 				A7FBB1761A6A3B8B006B8516 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
