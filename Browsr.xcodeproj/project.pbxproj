@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		A7FBB1761A6A3B8B006B8516 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FBB1751A6A3B8B006B8516 /* AppDelegate.m */; };
 		A7FBB1781A6A3B8B006B8516 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FBB1771A6A3B8B006B8516 /* main.m */; };
-		A7FBB17B1A6A3B8B006B8516 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FBB17A1A6A3B8B006B8516 /* ViewController.m */; };
+		A7FBB17B1A6A3B8B006B8516 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FBB17A1A6A3B8B006B8516 /* MainViewController.m */; };
 		A7FBB17D1A6A3B8B006B8516 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7FBB17C1A6A3B8B006B8516 /* Images.xcassets */; };
 		A7FBB1801A6A3B8B006B8516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FBB17E1A6A3B8B006B8516 /* Main.storyboard */; };
 		A7FBB18C1A6A3B8B006B8516 /* BrowsrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FBB18B1A6A3B8B006B8516 /* BrowsrTests.m */; };
-		A7FBB1971A6A3CE8006B8516 /* BluetoothConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FBB1961A6A3CE8006B8516 /* BluetoothConnection.m */; };
+		A7FBB1971A6A3CE8006B8516 /* BluetoothConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FBB1961A6A3CE8006B8516 /* BluetoothConnectionViewController.m */; };
+		AB1526001A6AFBC60095AB96 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1525FE1A6AFBC60095AB96 /* BrowserViewController.m */; };
+		AB1526031A6AFE0C0095AB96 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB1526021A6AFE0C0095AB96 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,15 +34,18 @@
 		A7FBB1741A6A3B8B006B8516 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7FBB1751A6A3B8B006B8516 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A7FBB1771A6A3B8B006B8516 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A7FBB1791A6A3B8B006B8516 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A7FBB17A1A6A3B8B006B8516 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A7FBB1791A6A3B8B006B8516 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A7FBB17A1A6A3B8B006B8516 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		A7FBB17C1A6A3B8B006B8516 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A7FBB17F1A6A3B8B006B8516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7FBB1851A6A3B8B006B8516 /* BrowsrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrowsrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FBB18A1A6A3B8B006B8516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7FBB18B1A6A3B8B006B8516 /* BrowsrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowsrTests.m; sourceTree = "<group>"; };
-		A7FBB1951A6A3CE8006B8516 /* BluetoothConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothConnection.h; sourceTree = "<group>"; };
-		A7FBB1961A6A3CE8006B8516 /* BluetoothConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothConnection.m; sourceTree = "<group>"; };
+		A7FBB1951A6A3CE8006B8516 /* BluetoothConnectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothConnectionViewController.h; sourceTree = "<group>"; };
+		A7FBB1961A6A3CE8006B8516 /* BluetoothConnectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothConnectionViewController.m; sourceTree = "<group>"; };
+		AB1525FD1A6AFBC60095AB96 /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
+		AB1525FE1A6AFBC60095AB96 /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
+		AB1526021A6AFE0C0095AB96 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB1526031A6AFE0C0095AB96 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +70,7 @@
 		A7FBB1661A6A3B8B006B8516 = {
 			isa = PBXGroup;
 			children = (
+				AB1526021A6AFE0C0095AB96 /* WebKit.framework */,
 				A7FBB1711A6A3B8B006B8516 /* Browsr */,
 				A7FBB1881A6A3B8B006B8516 /* BrowsrTests */,
 				A7FBB1701A6A3B8B006B8516 /* Products */,
@@ -84,10 +91,12 @@
 			children = (
 				A7FBB1741A6A3B8B006B8516 /* AppDelegate.h */,
 				A7FBB1751A6A3B8B006B8516 /* AppDelegate.m */,
-				A7FBB1791A6A3B8B006B8516 /* ViewController.h */,
-				A7FBB17A1A6A3B8B006B8516 /* ViewController.m */,
-				A7FBB1951A6A3CE8006B8516 /* BluetoothConnection.h */,
-				A7FBB1961A6A3CE8006B8516 /* BluetoothConnection.m */,
+				A7FBB1791A6A3B8B006B8516 /* MainViewController.h */,
+				A7FBB17A1A6A3B8B006B8516 /* MainViewController.m */,
+				A7FBB1951A6A3CE8006B8516 /* BluetoothConnectionViewController.h */,
+				A7FBB1961A6A3CE8006B8516 /* BluetoothConnectionViewController.m */,
+				AB1525FD1A6AFBC60095AB96 /* BrowserViewController.h */,
+				AB1525FE1A6AFBC60095AB96 /* BrowserViewController.m */,
 				A7FBB17C1A6A3B8B006B8516 /* Images.xcassets */,
 				A7FBB17E1A6A3B8B006B8516 /* Main.storyboard */,
 				A7FBB1721A6A3B8B006B8516 /* Supporting Files */,
@@ -220,9 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7FBB17B1A6A3B8B006B8516 /* ViewController.m in Sources */,
+				A7FBB17B1A6A3B8B006B8516 /* MainViewController.m in Sources */,
 				A7FBB1781A6A3B8B006B8516 /* main.m in Sources */,
-				A7FBB1971A6A3CE8006B8516 /* BluetoothConnection.m in Sources */,
+				AB1526001A6AFBC60095AB96 /* BrowserViewController.m in Sources */,
+				A7FBB1971A6A3CE8006B8516 /* BluetoothConnectionViewController.m in Sources */,
 				A7FBB1761A6A3B8B006B8516 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +420,7 @@
 				A7FBB1911A6A3B8B006B8516 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7FBB1921A6A3B8B006B8516 /* Build configuration list for PBXNativeTarget "BrowsrTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +429,7 @@
 				A7FBB1941A6A3B8B006B8516 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
