@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.title = @"Ninja Browser";
+  self.title = @"ninja";
   [self.view setAutoresizingMask:NSViewNotSizable];
   self.connectButton.alphaValue = 0;
   // Do any additional setup after loading the view.
@@ -40,32 +40,42 @@
 
 
 - (void)setupChooseDevice {
-  [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
-    context.duration = 0.3;
-    self.searchButton.animator.frame = NSMakeRect(MARGIN, self.view.frame.size.height - MARGIN - self.searchButton.frame.size.height, self.connectButton.frame.size.width, self.searchButton.frame.size.height);
-    self.connectButton.animator.frame = NSMakeRect(self.view.frame.size.width - MARGIN - self.connectButton.frame.size.width, self.view.frame.size.height - MARGIN - self.connectButton.frame.size.height, self.connectButton.frame.size.width, self.connectButton.frame.size.height);
-    self.searchButton.title = @"Refresh";
-    self.connectButton.alphaValue = 1;
-  } completionHandler:^{
-    [self.searchButton setFrame:NSMakeRect(MARGIN, self.view.frame.size.height - MARGIN - self.searchButton.frame.size.height, self.searchButton.frame.size.width, self.searchButton.frame.size.height)
-     ];
-    NSLog(@"%f, %f", self.searchButton.frame.origin.x, self.searchButton.frame.origin.y);
-    
-  }];
   
   NSScrollView *tableContainer = [[NSScrollView alloc] initWithFrame:NSMakeRect(MARGIN, MARGIN, self.view.frame.size.width-2*MARGIN, self.view.frame.size.height-3*MARGIN-self.searchButton.frame.size.height)];
-  
   self.devicesTableView = [[NSTableView alloc] initWithFrame:NSMakeRect(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
   
   
   NSTableColumn *column =[[NSTableColumn alloc]initWithIdentifier:@"Devices"];
-  [column.headerCell setTitle:@"  Devices"];
+  column.width = tableContainer.frame.size.width;
+  [column.headerCell setTitle:@"   Devices"];
   [self.devicesTableView addTableColumn:column];
   
   self.devicesTableView.dataSource = self;
   self.devicesTableView.delegate = self;
   [tableContainer setDocumentView:self.devicesTableView];
+  tableContainer.alphaValue = 0;
   [self.view addSubview:tableContainer];
+  
+  [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
+    context.duration = 0.3;
+    self.searchButton.animator.frame = NSMakeRect(MARGIN, self.view.frame.size.height - MARGIN - self.searchButton.frame.size.height, self.connectButton.frame.size.width, self.searchButton.frame.size.height);
+    self.searchButton.title = @"Refresh";
+    self.connectButton.animator.frame = NSMakeRect(self.view.frame.size.width - MARGIN - self.connectButton.frame.size.width, self.view.frame.size.height - MARGIN - self.connectButton.frame.size.height, self.connectButton.frame.size.width, self.connectButton.frame.size.height);
+    
+    
+    self.connectButton.alphaValue = 1;
+    
+  } completionHandler:^{
+    [self.searchButton setFrame:NSMakeRect(MARGIN, self.view.frame.size.height - MARGIN - self.searchButton.frame.size.height, self.searchButton.frame.size.width, self.searchButton.frame.size.height)
+     ];
+    NSLog(@"%f, %f", self.searchButton.frame.origin.x, self.searchButton.frame.origin.y);
+    
+    tableContainer.alphaValue = 1;
+  }];
+  
+  
+  
+  
 }
 
 - (IBAction)connectBluetooth:(id)sender {
@@ -78,7 +88,7 @@
     return;
   
   if (!self.indicator) {
-    self.indicator = [[NSProgressIndicator alloc] initWithFrame:NSMakeRect(self.view.frame.size.width/2, self.devicesTableView.frame.size.height/2, 30, 30)];
+    self.indicator = [[NSProgressIndicator alloc] initWithFrame:NSMakeRect(self.view.frame.size.width/2 - 15, self.devicesTableView.frame.size.height/2 + 15, 30, 30)];
     self.indicator.style = NSProgressIndicatorSpinningStyle;
     [self.view addSubview:self.indicator];
   }
@@ -94,7 +104,9 @@
 }
 
 - (IBAction)poundKey:(id)sender {
-  
+  NSInteger row = [self.devicesTableView selectedRow];
+  if (row < 0 || row >= [self.devices count])
+    return;
   [self.myBC bluetoothConnect:[self.devices objectAtIndex:[self.devicesTableView selectedRow]]];
   [self performSegueWithIdentifier:@"showBrowser" sender:sender];
 }
